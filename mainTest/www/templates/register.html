@@ -1,0 +1,199 @@
+<!-- <ion-view view-title="Form">
+  <ion-content style="padding:20px">
+    <div align="center" style="padding:10px; color:#5D6D7e">
+        <b>CANDIDATE DETAILS</b>
+  </div>
+
+    <label class="item item-input item-select">
+        <div class="alltxtcolor"> Who is giving the Test?</div>
+        <select ng-options="names.value for names in names" ng-model="opt"></select>
+    </label>
+
+
+    <div class="list" ng-show="opt.value == 'OTHER'">
+      <label class="item item-input">
+          <span class="input-label">First Name</span>
+          <input type="text" placeholder="" ng-model="name">
+      </label>
+
+       <label class="item item-input">
+          <span class="input-label">Last Name</span>
+          <input type="text" placeholder="" ng-model="name">
+        </label>
+
+       <label class="item item-input">
+         <span class="input-label">Email</span>
+         <input type="text" placeholder="" ng-model="email">
+       </label>
+
+       <label class="item item-input">
+         <span class="input-label">Contact</span>
+         <input type="number" placeholder="" ng-model="contact">
+       </label>
+
+       <label class="item item-input">
+         <span class="input-label">DOB</span>
+         <input type="date" placeholder="Dob" ng-model="Dob" required>
+       </label>
+          <div class="row" style="color:#5D6D7E">
+                  <div class="col">
+                    <label style="font-size:16px">
+                      <input type="radio" name="gender" ng-model="gender" >
+                      Male
+                    </label>
+                  </div>
+
+                 <div class="col">
+                    <label style="font-size:16px">
+                      <input type="radio" name="gender" ng-model="gender" >
+                      Female
+                    </label>
+                  </div>
+            </div>
+        </label>
+
+
+   <label class="item item-input">
+     <span class="input-label">Select User Type</span>
+     <input type="text" placeholder="" ng-model="city" required>
+   </label>
+  </div>
+
+    <div class="list" ng-show="opt.value=='SELF'">
+
+    <label class="item item-input">
+      <span class="input-label">DOB</span>
+      <input type="date" ng-model="Dob" required>
+    </label>
+
+    <div class="row" style="color:#5D6D7E">
+            <div class="col">
+              <label style="font-size:16px">
+                <input type="radio" name="gender" ng-model="gender" >
+                Male
+              </label>
+            </div>
+
+           <div class="col">
+              <label style="font-size:16px">
+                <input type="radio" name="gender" ng-model="gender" >
+                Female
+              </label>
+            </div>
+    </div>
+
+
+<label class="item item-input">
+  <span class="input-label">City</span>
+  <input type="text" placeholder="" ng-model="city" required>
+</label>
+ </div>
+
+
+    <div class="margin-top">
+        <a class="button button-positive  button-block" ui-sref="app.testDetails">Submit</a>
+    </div>
+
+  </ion-content>
+</ion-view>
+-->
+
+<ion-view>
+  <ion-content ng-controller="registerCtrl">
+    <label class=" item center-align">
+        <h3> CANDIDATE DETAILS</b> </h3>
+    </label>
+
+    <label class="item item-input item-select">
+        <div class="input-label color-dheya"><b> Who Want to give a Test ?</b> </div>
+        <select ng-options="types.value for types in types" ng-model="opt"></select>
+    </label>
+
+
+    <div class="list" ng-show="opt.value == 'OTHER'">
+      <label class="item item-input">
+          <span class="input-label">First Name :</span>
+          <input type="text" placeholder="" ng-model="fname">
+      </label>
+
+       <label class="item item-input">
+          <span class="input-label">Last Name :</span>
+          <input type="text" placeholder="" ng-model="lname">
+        </label>
+
+       <label class="item item-input">
+         <span class="input-label">Email :</span>
+         <input type="text" placeholder="" ng-model="email">
+       </label>
+
+       <label class="item item-input">
+         <span class="input-label">Contact :</span>
+         <input type="number" placeholder="" ng-model="contact">
+       </label>
+
+       <label class="item item-input">
+         <span class="input-label">DOB :</span>
+         <input type="date" placeholder="Dob" ng-model="Dob" required>
+       </label>
+
+       <label class="row margin-left"> <span class="input-label">Gender:</span>
+          <div class="row">
+
+                  <div class="margin-left">
+                    <label style="font-size:16px">
+                      <input type="radio" name="gender" value="male" ng-model="gender" >
+                      <b>Male</b>
+                    </label>
+                  </div>
+
+                 <div class="margin-left">
+                    <label style="font-size:16px">
+                      <input type="radio" name="gender" value="Female" ng-model="gender" >
+                      <b>Female</b>
+                    </label>
+                  </div>
+            </div>
+        </label>
+
+
+   <label class="item item-input item-select">
+     <span class="input-label">Select User Type:</span>
+     <select ng-options="names for names in names" ng-model="type"></select>
+   </label>
+    </div>
+    </div>
+
+
+    <div class="list" ng-show="opt.value=='YOURSELF'">
+
+    <label class="item item-input">
+      <span class="input-label">DOB :</span>
+      <input type="date" ng-model="Dob" required>
+    </label>
+
+ <label class="row margin-left"><span class="input-label">Gender:</span>
+    <div class="row">
+            <div class="margin-left">
+              <label style="font-size:16px">
+                <input type="radio" name="gender" ng-model="gender" >
+                <b>Male</b>
+              </label>
+            </div>
+
+           <div class="margin-left">
+              <label style="font-size:16px">
+                <input type="radio" name="gender" ng-model="gender" >
+                <b>Female</b>
+              </label>
+            </div>
+          </div>
+        </label>
+
+ </div>
+
+    <div class="margin-top">
+        <a class="button button-positive  button-block" ng-click="newUserReg($stateParams.T_Key)">Continue</a>
+    </div>
+
+  </ion-content>
+</ion-view>

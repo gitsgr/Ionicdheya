@@ -1,0 +1,89 @@
+<ion-view view-title="PD Test" ng-init="getQuetions()" style="background-color: #4CB8C4">
+<ion-content style="padding : 10px">
+<div class="card" ng-repeat="item in que track by $index" ng-show="$index == indexToShow" style="height:320px;">
+  <div class="item item-divider" style="background-color:#5D6D7E; color:#fff" >
+    Question No: {{item.id}}
+  </div>
+  <div class="item item-text-wrap" style="color: #5D6D7E;  text-align:justify; height:70px; font-size:16px" >
+    <b>A.</b> {{q1}}
+  </div>
+  <div class="item item-text-wrap" style="color: #5D6D7E; text-align:justify;  height:70px; font-size:16px" >
+    <b>B.</b> {{q2}}
+  </div>
+  <div class="item item-text-wrap" style="color: #5D6D7E; text-align:justify;  height:70px; font-size:16px" >
+    <b>C.</b> {{q3}}
+  </div>
+  <div class="item item-text-wrap" style="color: #5D6D7E; text-align:justify;  height:70px; font-size:16px" >
+    <b>D.</b> {{q4}}
+  </div>
+</div>
+<hr>
+<div class="row" style="background-color:#fff; margin-top: 20px">
+  <div class="col col-50" style="background-color:#fff; text-align:center; border: grey 1px solid">
+    <div class="item item-divider" style="background-color:#5D6D7E; color:#fff" >
+      Most Suitable
+    </div>
+    <div class="col col-100">
+      <label style="font-size:16px; color:grey">
+        <input type="radio" name="answer1" ng-model="answer12" value="{{1}}">
+        <b>A</b>
+      </label>
+    </div>
+    <div class="col col-100">
+      <label style="font-size:16px; color:grey">
+        <input type="radio" name="answer2" ng-model="answer12" value="{{2}}">
+        <b>B</b>
+      </label>
+    </div>
+    <div class="col col-100">
+      <label style="font-size:16px; color:grey">
+        <input type="radio" name="answer3" ng-model="answer12" value="{{3}}">
+        <b>C</b>
+      </label>
+    </div>
+    <div class="col col-100">
+      <label style="font-size:16px; color:grey">
+        <input type="radio" name="answer4" ng-model="answer12" value="{{4}}">
+        <b>D</b>
+      </label>
+    </div>
+
+  </div>
+  <div class="col col-50" style="background-color:#fff; text-align:center; border: grey 1px solid">
+    <div class="item item-divider" style="background-color:#5D6D7E; color:#fff">
+      Least Suitable
+    </div>
+    <div class="col col-100">
+      <label style="font-size:16px; color:grey">
+        <input type="radio" name="answer11" ng-model="answer22" value="{{1}}">
+        <b>A</b>
+      </label>
+    </div>
+    <div class="col col-100">
+      <label style="font-size:16px; color:grey ">
+        <input type="radio" name="answer12" ng-model="answer22" value="{{2}}">
+        <b>B</b>
+      </label>
+    </div>
+    <div class="col col-100">
+      <label style="font-size:16px; color:grey">
+        <input type="radio" name="answer13" ng-model="answer22" value="{{3}}">
+        <b>C</b>
+      </label>
+    </div>
+    <div class="col col-100">
+      <label style="font-size:16px; color:grey">
+        <input type="radio" name="answer14" ng-model="answer22" value="{{4}}">
+        <b>D</b>
+      </label>
+    </div>
+
+  </div>
+
+</div>
+<div class="container" style="margin-top: 20px">
+    <button class="button button-dark" ng-click="change(answer12,answer22)">Next Question</button>
+</div>
+
+</ion-content>
+</ion-view>

@@ -1,0 +1,74 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-stable">
+
+    </ion-header-bar>
+    <ion-content>
+      <div align="center" style="padding:10px">
+      <img style="height:70%; width:70%" ng-src="img/dheya_logo.png">
+    </div>
+      <ion-list>
+
+        <ion-item class="item item-icon-left" menu-close href="#/app/userProfile">
+        <i class="icon ion-android-contact"></i>  My Profile
+        </ion-item>
+
+        <ion-item class="item item-icon-left" menu-close href="#/app/search">
+        <i class="icon ion-briefcase"></i>  PRODUCTS
+        </ion-item>
+
+        <ion-item class="item item-icon-left" menu-close href="#/app/myTest">
+        <i class="icon ion-compose"></i>  TEST
+          <span class="badge badge-calm">1</span>
+        </ion-item>
+
+        <ion-item class="item item-icon-left" menu-close href="#/app/cdf">
+        <i class="icon ion-person-stalker"></i>  CDF
+        </ion-item>
+
+        <ion-item class="item item-icon-left"menu-close href="#/app/Institutes">
+          <i class="icon ion-search"></i>My Research
+        </ion-item>
+
+        <!--<ion-item class="item item-icon-left" menu-close href="#/app/alltestInstructions">
+        <i class="icon ion-help-buoy"></i>  Instructions
+        </ion-item>
+
+        <ion-item class="item item-icon-left" menu-close href="#/app/browse">
+        <i class= " icon ion-scissors"></i> Local Storage
+        </ion-item>
+-->
+        <ion-item class="item item-icon-left" menu-close href="#/app/referfriend">
+        <i class="icon ion-earth"></i>  Refer A Friend
+        </ion-item>
+
+        <ion-item class="item item-icon-left" menu-close href="#/app/aboutUs">
+         <i class="icon ion-pricetags"></i>About Us
+        </ion-item>
+
+        <ion-item class="item item-icon-left" menu-close href="#/app/settings">
+         <i class="icon ion-gear-a"></i>  Settings
+        </ion-item>
+
+        <ion-item class="item item-icon-left"menu-close href="#/app/logout">
+          <i class="icon ion-log-out"></i>
+          LogOut
+        </ion-item>
+
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

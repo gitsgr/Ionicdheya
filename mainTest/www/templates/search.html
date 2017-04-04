@@ -1,0 +1,30 @@
+<ion-view view-title="Dheya's Products" ng-init="getData()" >
+
+  <ion-content>
+    <hr>
+    <div class="" style="text-align: center" >
+    <ion-slide-box show-pager="true" auto-play="true" does-continue="true" on-slide-changed="slideHasChanged($index)">
+    <ion-slide>
+        <img style="height:80%;width:97%"src="http://www.dheya.com/wp-content/uploads/2017/03/4.1.jpg" />
+    </ion-slide>
+    <ion-slide>
+        <img style="height:80%;width:97%"src="http://www.dheya.com/wp-content/uploads/2017/03/5.jpg" />
+    </ion-slide>
+</ion-slide-box>
+</div>
+<hr>
+
+    <div class="card">
+      <a class="item item-thumbnail-left" ng-repeat="item in alldata" href="#/app/dbrecords/{{item.id}}">
+      <img style="height:70%; width:70%"  ng-src="{{item.logo}}">
+      <!--  <h2>{{item.p_title}}</h2>
+        <p>Plan Your Career!</p> -->
+        <ion-item class="item item-icon-right">
+  <!--    <b>  {{item.p_title}} </b><i class="icon ion-chevron-right"></i> -->
+        <p>Plan Your Career!</p>
+        <p>Click To Know More</p>
+        </ion-item>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

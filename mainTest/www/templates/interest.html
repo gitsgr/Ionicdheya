@@ -1,0 +1,47 @@
+<ion-view view-title="Interest Test" ng-init="getQuetions()" style="background-color: #4CB8C4">
+  <ion-content style="padding : 20px" class="has-footer">
+<div id="testcard" ng-show="showtestcard">
+    <div class="container"><h3  style="color:white">Interest Test</h3></div>
+    <p style="color:white" class="ryght">Quetions: {{que.length}}</p>
+
+  <div class="card" style="height: 175px">
+      <div class="item item-divider" style="color:#5D6D7E" ng-repeat="item in que track by $index" ng-show="$index == indexToShow">
+        Question No: {{item.id}}   / {{que.length}}
+      </div>
+      <div class="item item-text-wrap" style="text-align:justify;height: 175px; font-size:16px" ng-repeat="item in que track by $index" ng-show="$index == indexToShow">
+        {{item.quetion}}
+      </div>
+  </div>
+      <div class="list list-inset">
+        <div class="item">
+          <label style="font-size:16px">
+            <input type="radio" name="answer" ng-model="answer" value="{{1}}">
+            Like
+          </label>
+        </div>
+
+        <div class="item">
+          <label style="font-size:16px">
+            <input type="radio" name="answer" ng-model="answer" value="{{0}}">
+            Disike
+          </label>
+        </div>
+  </div>
+
+  <div class="container" >
+      <button class="button-small button-light" ng-click="change(answer)">Next Question</button>
+  </div>
+</div>
+
+<div id="testdone" ng-show="showtestdone" class="container" style="color:white; padding:20px">
+  <h4 style="color:white">Interest Test Completed!</h4>
+
+
+<button class="button button-stable button-block" ui-sref='app.testMain'><u>Back</u></button>
+</div>
+</ion-content>
+
+<!--<ion-footer-bar align-title="right" class="bar-stable">
+  <h1 class="title" style="color:#0094d4">www.dheya.com</h1>
+</ion-footer-bar>-->
+</ion-view>

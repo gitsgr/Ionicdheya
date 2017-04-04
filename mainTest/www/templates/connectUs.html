@@ -1,0 +1,39 @@
+<ion-view view-title="Connect With US">
+  <ion-content>
+    <body>
+<div class="padding" ng-controller="connectservicectrl">
+
+  <div class="card">
+    <div class="item item-calm item-divider">
+        Raise Your Ticket Here
+     </div>
+  <label class="item item-input">
+                <span class="input-label">Name</span>
+                <input type="text" placeholder="" ng-model="name" form-validate-after>
+            </label>
+            <label class="item item-input">
+                          <span class="input-label">Contact No</span>
+                          <input type="text" placeholder="" ng-model="contactNo" form-validate-after>
+                      </label>
+                      <label class="item item-input">
+                                    <span class="input-label">EmailId</span>
+                                    <input type="text" placeholder="" ng-model="email" form-validate-after>
+                                </label>
+                                <label class="item item-input">
+                                              <span class="input-label">Query</span>
+                                              <input type="text" placeholder="" ng-model="query" form-validate-after>
+                                          </label>
+
+                                        </label>
+                                        </div>
+                                      </div>
+<div class="padding">
+                <button class="button button-block button-calm" type="submit" ng-click="postdata(name,contactNo,email,query)">Send</button>
+</div>
+
+
+
+
+</body>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,26 @@
+<ion-view>
+  <ion-content ng-controller="userProfileCtrl">
+    <div class= "card">
+<label class="item item-input ">
+                    <span class="input-label">First Name :</span>
+                  {{firstname}}
+                </label>
+
+      <label class="item item-input">
+                    <span class="input-label">Last Name :</span>
+                    {{lastname}}
+                </label>
+                      <label class="item item-input ">
+                        <span class="input-label">Email :</span>
+                        {{Email}}
+                  </label>
+                      <label class="item item-input">
+                      <span class="input-label">Contact :</span>
+                      {{contact}}
+                    </label>
+                    <div class=margin-top>
+<button class="button button-calm align_center button-block icon ion-edit button-small" ui-sref="app.editprofile"> &nbsp;Edit </button>
+</div>
+</div>
+  </ion-content>
+</ion-view>

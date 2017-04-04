@@ -1,0 +1,86 @@
+<ion-view view-title="Main Test" ng-init="getMainTest()" style="background-color: #g14137">
+  <ion-content style="padding:10px">
+    <div  ng-repeat="item in testSet">
+    <!--<div class="item item-icon-right" ui-sref='app.ability'>
+      <i class="icon ion-play" style="color: #74DD58"></i>
+      <ion-checkbox  ng-checked="true">
+         {{item.title}}
+      </ion-checkbox>
+      </div>-->
+      <div class="item item-icon-right" style="color: #485563 ">
+         <i class="icon ion-chevron-right"></i>
+
+        <a href="{{item.test_page}}">
+         <p style="color: #1B4F72 ">{{item.id}}.{{item.test_name}} TEST</p>
+         <p class="alignleft" style="color:#485563 ; font-size:12px">Questions :15 </p>
+         <p class="alignright" style="color:#485563 ; font-size:12px">Status :Pending </p>
+       </a>
+
+     </div>
+   </div>
+
+
+   <!--
+    <div class="list" style="padding:15px">
+   <div class="item item-divider" style="background-color:#485563; color:#fff">Ability Test</div>
+
+
+
+   <div class="item item-icon-right" ui-sref='app.ability'>
+      <i class="icon ion-play" style="color: #74DD58"></i>
+      <input type="checkbox" ng-model="test1.checked" ng-true-value="1" ng-false-value="0" ng-checked="test1.checked == 1">
+      Test No 1
+   </div>
+   <div class="item item-icon-right" ui-sref='app.ability'>
+      <i class="icon ion-play" style="color: #74DD58"></i>
+      <input type="checkbox" ng-model="test2.checked" ng-true-value="1" ng-false-value="0" ng-checked="test2.checked == 1">
+      Test No 2
+   </div>
+   <div class="item item-icon-right" ui-sref='app.ability'>
+      <i class="icon ion-play" style="color: #74DD58"></i>
+      <input type="checkbox" ng-model="test3.checked" ng-true-value="1" ng-false-value="0" ng-checked="test3.checked == 1">
+      Test No 3
+   </div>
+   <div class="item item-icon-right" ui-sref='app.ability'>
+      <i class="icon ion-play" style="color: #74DD58"></i>
+      <input type="checkbox" ng-model="test4.checked" ng-true-value="1" ng-false-value="0" ng-checked="test4.checked == 1">
+      Test No 4
+   </div>
+   <div class="item item-icon-right" ui-sref='app.ability'>
+      <i class="icon ion-play" style="color: #74DD58"></i>
+      <input type="checkbox" ng-model="test5.checked" ng-true-value="1" ng-false-value="0" ng-checked="test5.checked == 1">
+      Test No 5
+   </div>
+   <div class="item item-icon-right" ui-sref='app.testNo6'>
+      <i class="icon ion-play" style="color: #74DD58"></i>
+      <input type="checkbox" ng-model="test6.checked" ng-true-value="1" ng-false-value="0" ng-checked="test6.checked == 1">
+      Test No 6
+   </div>
+   <div class="item item-icon-right" ui-sref='app.numericalAbilityTest'>
+      <i class="icon ion-play" style="color: #74DD58"></i>
+      <input type="checkbox" ng-model="test7.checked" ng-true-value="1" ng-false-value="0" ng-checked="test7.checked == 1">
+      Test No 7
+   </div>
+
+   <div class="item item-divider" style="background-color:#485563; color:#fff">Interest Test</div>
+   <div class="item item-icon-right" ui-sref='app.interest'>
+      <i class="icon ion-play" style="color: #74DD58"></i>
+<input type="checkbox" ng-model="test8.checked" ng-true-value="1" ng-false-value="0" ng-checked="test8.checked == 1">
+      Test No 8
+   </div>
+
+   <div class="item item-divider" style="background-color:#485563; color:#fff">Personality Test</div>
+   <div class="item item-icon-right" ui-sref='app.testpage'>
+      <i class="icon ion-play" style="color: #74DD58"></i>
+<input type="checkbox" ng-model="test9.checked" ng-true-value="1" ng-false-value="0" ng-checked="test9.checked == 1">
+      Test No 9
+   </div>
+   <div class="item item-icon-right" ui-sref='app.testNo10'>
+      <i class="icon ion-play" style="color: #74DD58"></i>
+      <input type="checkbox" ng-model="test10.checked" ng-true-value="1" ng-false-value="0" ng-checked="test10.checked == 1">
+      Test No 10
+   </div>
+</div>
+-->
+  </ion-content>
+</ion-view>

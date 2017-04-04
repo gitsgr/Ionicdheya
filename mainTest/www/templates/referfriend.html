@@ -1,0 +1,46 @@
+<ion-view view-title="Refer A Friend">
+  <ion-content>
+    <body>
+<div>
+<div class="padding">
+  <div class="card">
+    <div class="item item-calm item-divider">
+          Refer By
+     </div>
+  <label class="item item-input">
+                <span class="input-label">Email :</span>
+                {{referbyEmail}}
+            </label>
+</div>
+<div class="card">
+  <div class="item item-calm item-divider">
+        Refer To
+   </div>
+      <label class="item item-input">
+                          <span class="input-label">Name :</span>
+                          <input type="text" placeholder="" ng-model="name" form-validate-after>
+                      </label>
+
+                      <label class="item item-input">
+                                    <span class="input-label">Contact Number : </span>
+                                    <input type="text" placeholder=" " ng-model="contactNo" form-validate-after>
+                                </label>
+
+                                <label class="item item-input">
+                                              <span class="input-label">Email : </span>
+                                              <input type="text" placeholder="" ng-model="email" form-validate-after>
+                                          </label>
+</div>
+<form name="signupform">
+<div class="dheya-color" >
+<input type="checkbox"  ng-model="check" required="true"> &nbsp;I agree with <a ng-click="tos()">Terms and Conditions</a>
+</div>
+</form>
+
+      <button class="button button-block button-calm" type="submit" ng-disabled="signupform.$invalid" ng-click="postdata(referbyEmail,name,contactNo,email)">Send</button>
+      </label>
+               </div>
+        </div>
+       </body>
+    </ion-content>
+   </ion-view>

@@ -1,0 +1,28 @@
+<ion-view title="CDF">
+  <ion-content>
+    <label class="item item-input">
+     <i class="icon ion-search placeholder-icon"></i>
+     <input type="search" placeholder="Search by city" ng-model="cityname" ng-keyup="byCity(cityname)">
+   </label>
+    <ion-list>
+        <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in items"
+                  item="item"
+                  type="item-text-wrap"
+                  href="#/app/cdfDetails/{{item.uId}}">
+                  <img ng-src="img/avtar.png">
+                  <span class="alignright">
+                                    <i class="ion-ios-star custom-icon"></i>
+                                    <i class="ion-ios-star custom-icon"></i>
+                                    <i class="ion-ios-star custom-icon"></i>
+                                    <i class="ion-ios-star-outline custom-icon"></i>
+                                    <i class="ion-ios-star-outline custom-icon"></i></span>
+                  <h2>{{item.fname}} {{item.lname}}</h2>
+                  <p>{{ item.qualification}}</p>
+                  <p>{{ item.city}}</p>
+
+        </ion-item>
+      </ion-list>
+     <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()" distance="1%"></ion-infinite-scroll>
+
+ </ion-content>
+</ion-view>

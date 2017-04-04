@@ -1,0 +1,67 @@
+<ion-view view-title="Numerical Ability Test" ng-init="getQuetions()" style="background-color: #4CB8C4">
+  <ion-content style="padding : 12px" class="has-footer">
+<div id="tcard" ng-show="testcard">
+    <div class="container"><h3  style="color:white">Test No 7</h3></div>
+    <!--<p style="color:white" class="ryght">Quetions: 15</p>-->
+
+  <div class="card" style="height: 150px">
+      <div class="item item-divider" style="color:#5D6D7E" ng-repeat="item in que track by $index" ng-show="$index == indexToShow">
+          Question No: {{item.id}} / {{que.length}}
+      </div>
+      <div class="item item-text-wrap" style="text-align:justify;height: 100%; font-size:16px" ng-repeat="item in que track by $index" ng-show="$index == indexToShow">
+        {{item.quetion}}
+      </div>
+  </div>
+
+      <div ng-repeat="item in que track by $index" ng-show="$index == indexToShow" style="padding:10px">
+        <div class="item">
+          <label style="font-size:15px">
+            <input type="radio" name="answer" ng-model="answer" value="{{1}}">
+            {{item.optxt1}}
+          </label>
+        </div>
+
+        <div class="item">
+          <label style="font-size:15px">
+            <input type="radio" name="answer" ng-model="answer" value="{{2}}">
+            {{item.optxt2}}
+          </label>
+        </div>
+
+        <div class="item">
+          <label style="font-size:15px">
+            <input type="radio" name="answer" ng-model="answer" value="{{3}}">
+            {{item.optxt3}}
+          </label>
+        </div>
+
+        <div class="item">
+          <label style="font-size:15px">
+            <input type="radio" name="answer" ng-model="answer" value="{{4}}">
+            {{item.optxt4}}
+          </label>
+        </div>
+
+        <div class="item" ng-if="item.op5">
+          <label style="font-size:15px">
+            <input type="radio" name="answer" ng-model="answer" value="{{5}}">
+            {{item.optxt5}}
+          </label>
+        </div>
+
+  <div class="container">
+      <button class="button button-dark" ng-click="nxt(answer)">Next Question</button>
+  </div>
+  </div>
+</div>
+
+
+<div id="done" ng-show="testdone" class="container" style="color:white; padding:20px">
+  <h4 style="color:white">Numerical Ability Test Completed!</h4>
+<button class="button button-stable button-block" ui-sref='app.search'><u>Back</u></button>
+</div>
+</ion-content>
+<!--<ion-footer-bar align-title="right" class="bar-stable">
+  <h1 class="title" style="color:#0094d4">www.dheya.com</h1>
+</ion-footer-bar>-->
+</ion-view>

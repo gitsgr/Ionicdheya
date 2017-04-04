@@ -1,0 +1,80 @@
+<ion-view title="Institues">
+  <ion-content class="padding">
+<div>
+<label class="item item-input item-select">
+    <div class="input-label">
+        Select Career
+    </div>
+    <select ng-model="caId" ng-options="item.caId as item.careerName for item in careers" ng-change="loadcourse(caId)">
+        <option value=""></option>
+    </select>
+</label>
+
+
+  <label class="item item-input item-select">
+  <div class="input-label">
+    Select Course
+  </div>
+        <select ng-model="coId" ng-options="item.coId as item.courseName for item in courses" ng-change="loadSubCourses(coId)">
+          <option value=""></option>
+        </select>
+    </label>
+
+
+    <label class="item item-input item-select">
+    <div class="input-label">
+      Sub-Course
+    </div>
+    <select ng-model="subcoId" ng-options="item.subcoId as item.subcourseName for item in subcourses" ng-change="loadspecilization(subcoId)">
+      <option value=""></option>
+      </select>
+    </label>
+
+    <label class="item item-input item-select">
+    <div class="input-label">
+      specialization
+    </div>
+    <select ng-model="specizeString" ng-options="item.speclaization for item in specializationlist" ng-change="specializId(specizeString)">
+      <option value=""></option>
+      </select>
+    </label>
+
+    <label class="item item-input item-select">
+    <div class="input-label">
+      Select City
+    </div>
+    <select ng-model="cityName" ng-options=" item.cityName for item in cities" ng-change="displayCity(cityName)">
+      <option value=""></option> </select>
+    </label>
+
+
+    <button class="button button-block button-calm" ng-click="DisplayInstituteList()">Search</button>
+
+
+
+
+
+<div title="test" ng-repeat="item in institutes">
+<ion-item class="item-stable"
+                    ng-click="toggleGroup(item)"
+                    ng-class="{active: isGroupShown(item)}">
+              <i class="icon" ng-class="isGroupShown(item) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            {{item.instituteName}}&nbsp;&nbsp;&nbsp;{{item.instituteCity}}</span>
+          </ion-item>
+          <ion-item class="item-accordion" ng-repeat="ite in details" ng-show="isGroupShown(item)">
+            <div class="list">
+               <div class="item item-text-wrap">
+                    <b>  Institute Name:</b>   {{item.instituteName}} <hr>
+                    <b>  City: </b>  {{ite.instituteCity}}<hr>
+                   <b>   Address:  </b> {{ite.address}}<hr>
+                   <b>   Email: </b> {{ite.emailid}}<hr>
+                    <b>  Website:</b>  {{ite.website}}<hr>
+                    <b>  Contact NO.: </b>   {{ite.contactno}}<hr>
+                    <b>   Affiliated With: </b>  {{ite.affiliation}}
+                     </div>
+          </ion-item>
+
+</div>
+  </ion-content>
+</ion-view>

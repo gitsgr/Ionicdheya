@@ -1,0 +1,177 @@
+<ion-view view-title="Test No 6" ng-init="getQuetions()" style="background-color: #4CB8C4">
+  <ion-content style="padding:px">
+
+    <div id="testd" ng-show="showtcard">
+    <div id="Qcard" ng-show="showQcard">
+      <div class="container"><h4  style="color:white">Observe given figure</h4></div>
+      <p style="color:white; font-size: 18px" class="ryght">Time left : {{countDown}}</p>
+
+      <div class="card" ng-repeat="item in que track by $index" ng-show="$index == indexToShow">
+        <div class="item item-divider" style="background-color: #5D6D7E; padding-top:10px; color:#fff">
+          <b>Question figure {{indexToShow}} / {{que.length}}</b>
+        </div>
+          <div>
+              <img style="width: 100%; height: 100%" class="allimgs" ng-src="{{qImg}}">
+          </div>
+      </div>
+
+    </div>
+
+    <div id="ANScard" ng-show="showANScard">
+      <div class="container"><h4  style="color:white">Answer Set 1</h4></div>
+      <div  ng-repeat="item in que track by $index" ng-show="$index == indexToShow">
+
+
+      <div class="card">
+      <div>
+        <img style="width: 100%" ng-src="{{aImg1}}">
+      </div>
+      <div  class="row" style="text-align:center">
+                      <div class="col col-20" style="font-size:18px">
+                        <input type="radio" name="answer" ng-model="answer" value="{{1}}">
+                        <b>A</b>
+                      </div>
+                      <div class="col col-20" style="font-size:18px">
+                        <input type="radio" name="answer" ng-model="answer" value="{{2}}">
+                        <b>B</b>
+                      </div>
+                      <div class="col col-20" style="font-size:18px">
+                        <input type="radio" name="answer" ng-model="answer" value="{{3}}">
+                        <b>C</b>
+                      </div>
+                      <div class="col col-20" style="font-size:18px">
+                        <input type="radio" name="answer" ng-model="answer" value="{{4}}">
+                        <b>D</b>
+                      </div>
+                      <div class="col col-20" style="font-size:18px">
+                        <input type="radio" name="answer" ng-model="answer" value="{{5}}">
+                        <b>E</b>
+                      </div>
+      </div>
+    </div>
+
+    <div class="card">
+    <div>
+      <img style="width: 100%" ng-src="{{aImg2}}">
+    </div>
+    <div  class="row" style="text-align:center">
+                    <div class="col col-20" style="font-size:18px">
+                      <input type="radio" name="answer2" ng-model="answer2" value="{{1}}">
+                      <b>A</b>
+                    </div>
+                    <div class="col col-20" style="font-size:18px">
+                      <input type="radio" name="answer2" ng-model="answer2" value="{{2}}">
+                      <b>B</b>
+                    </div>
+                    <div class="col col-20" style="font-size:18px">
+                      <input type="radio" name="answer2" ng-model="answer2" value="{{3}}">
+                      <b>C</b>
+                    </div>
+                    <div class="col col-20" style="font-size:18px">
+                      <input type="radio" name="answer2" ng-model="answer2" value="{{4}}">
+                      <b>D</b>
+                    </div>
+                    <div class="col col-20" style="font-size:18px">
+                      <input type="radio" name="answer2" ng-model="answer2" value="{{5}}">
+                      <b>E</b>
+                    </div>
+    </div>
+  </div>
+
+  <div class="card">
+  <div>
+    <img style="width: 100%" ng-src="{{aImg3}}">
+  </div>
+  <div  class="row" style="text-align:center">
+                  <div class="col col-20" style="font-size:18px">
+                    <input type="radio" name="answer3" ng-model="answer3" value="{{1}}">
+                    <b>A</b>
+                  </div>
+                  <div class="col col-20" style="font-size:18px">
+                    <input type="radio" name="answer3" ng-model="answer3" value="{{2}}">
+                    <b>B</b>
+                  </div>
+                  <div class="col col-20" style="font-size:18px">
+                    <input type="radio" name="answer3" ng-model="answer3" value="{{3}}">
+                    <b>C</b>
+                  </div>
+                  <div class="col col-20" style="font-size:18px">
+                    <input type="radio" name="answer3" ng-model="answer3" value="{{4}}">
+                    <b>D</b>
+                  </div>
+                  <div class="col col-20" style="font-size:18px">
+                    <input type="radio" name="answer3" ng-model="answer3" value="{{5}}">
+                    <b>E</b>
+                  </div>
+  </div>
+  </div>
+
+  <div class="card">
+  <div>
+    <img style="width: 100%" ng-src="{{aImg4}}">
+  </div>
+  <div  class="row" style="text-align:center">
+                  <div class="col col-20" style="font-size:18px">
+                    <input type="radio" name="answer4" ng-model="answer4" value="{{1}}">
+                    <b>A</b>
+                  </div>
+                  <div class="col col-20" style="font-size:18px">
+                    <input type="radio" name="answer4" ng-model="answer4" value="{{2}}">
+                    <b>B</b>
+                  </div>
+                  <div class="col col-20" style="font-size:18px">
+                    <input type="radio" name="answer4" ng-model="answer4" value="{{3}}">
+                    <b>C</b>
+                  </div>
+                  <div class="col col-20" style="font-size:18px">
+                    <input type="radio" name="answer4" ng-model="answer4" value="{{4}}">
+                    <b>D</b>
+                  </div>
+                  <div class="col col-20" style="font-size:18px">
+                    <input type="radio" name="answer4" ng-model="answer4" value="{{5}}">
+                    <b>E</b>
+                  </div>
+  </div>
+  </div>
+
+  <div class="card">
+  <div>
+    <img style="width: 100%" ng-src="{{aImg5}}">
+  </div>
+  <div  class="row" style="text-align:center">
+                  <div class="col col-20" style="font-size:18px">
+                    <input type="radio" name="answer5" ng-model="answer5" value="{{1}}">
+                    <b>A</b>
+                  </div>
+                  <div class="col col-20" style="font-size:18px">
+                    <input type="radio" name="answer5" ng-model="answer5" value="{{2}}">
+                    <b>B</b>
+                  </div>
+                  <div class="col col-20" style="font-size:18px">
+                    <input type="radio" name="answer5" ng-model="answer5" value="{{3}}">
+                    <b>C</b>
+                  </div>
+                  <div class="col col-20" style="font-size:18px">
+                    <input type="radio" name="answer5" ng-model="answer5" value="{{4}}">
+                    <b>D</b>
+                  </div>
+                  <div class="col col-20" style="font-size:18px">
+                    <input type="radio" name="answer5" ng-model="answer5" value="{{5}}">
+                    <b>E</b>
+                  </div>
+  </div>
+  </div>
+  <div style="padding:20px">
+  <button class="button button-dark button-block" ng-click="change(answer1,answer2,answer3,answer4,answer5)">Next</button>
+</div>
+    </div>
+    </div>
+  </div>
+
+  <div id="done" ng-show="showtdone" class="container" style="color:white; padding:20px">
+    <h4 style="color:white">Memory recall Test Completed!</h4>
+  <button class="button button-dark button-block" ui-sref='app.testMain'><u>Back</u></button>
+  </div>
+
+</ion-content>
+</ion-view>

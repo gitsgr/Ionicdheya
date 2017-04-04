@@ -1,0 +1,61 @@
+<ion-view title="Login" style="background-color:#fff;" ng-init="Session()"> <!--08F8C1   hide-nav-bar="true"-->
+
+  <ion-content padding="true" class="has-header" ng-controller="loginCtrl">
+    <div align="center" style="padding:10px">
+    <img style="height:70px; width:170px" ng-src="img/dheya_logo.png">
+  </div>
+
+    <form name="myForm"class="list" style="background-color:#fff;">
+
+            <ion-list class="card">
+              <div class="spacer" style="height: 20px;"></div>
+
+              <div ng-show="LoginSection">
+        <label class="item item-input">
+            <span class="input-label"><b>Email</b> </span>
+            <input type="email" placeholder="" ng-model="email" required>
+        </label>
+
+
+        <label class="item item-input">
+              <span class="input-label"><b>Password</b></span>
+              <input type="password" placeholder="" ng-model="password" required>
+        </label>
+
+      </ion-list>
+      <div class="spacer" style="height: 30px;"></div>
+      <div  class="button button-calm button-block"   ng-click="verify()"><b>LOGIN</b></div>
+      <a class="button button-assertive  button-block button-clear small_button" ng-click="resetPassword()">Forgot Password ?</a>
+      <p align="center"><a  ui-sref="app.signup">New User? Create an account</a></p>
+
+      <div align="center"class="padding" ><b>----------- OR ----------</b></div>
+        <div align="center"><b>Login Using</b></div>
+    <div class="row">
+      <div class="col col-50">
+        <a class="button button-positive button-block">Facebook</a><div id="status"></div>
+      </div>
+      <div class="col col-50">
+        <a class="button button-assertive button-block">Google+</a>
+      </div>
+    </div>
+</div>
+  </form>
+
+    <div ng-show="otpsection"><!--OTP Section Div-->
+    <label class="item item-input">
+          <span class="input-label"><b>Enter OTP</b></span>
+          <input type="Text" placeholder="OTP" ng-model="otpmodel" required>
+    </label>
+         <a  class="button button-calm  button-block small_button"  ng-click="checkOtp()">SUBMIT</a>
+         <a  class="button button-light  button-block"  ng-click="backtoLogin()"><b>Back</b></a>
+  </div>
+
+
+  <div>
+
+  </div>
+
+
+
+  </ion-content>
+</ion-view>

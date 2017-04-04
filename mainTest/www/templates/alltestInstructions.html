@@ -1,0 +1,25 @@
+<ion-view view-title="Instructions" ng-init="getRules(2)" style="color: #fff; background-color: #4CB8C4">
+<ion-content>
+  <div align="center">
+     <h4>{{instName}} TEST</h4>
+     <p><b>Instructions</b></p>
+  </div>
+  <div class="card">
+
+   <div class="item item-body">
+      {{inst}}
+      <p><b>Sample Que. Image</b></p>
+      <img  ng-src="{{instQimg}}">
+   </div>
+   <div class="item item-body">
+     <p><b>Sample Opt. Image</b></p>
+      <img class="full-image" ng-src="{{instOimg}}">
+      {{inst1}}
+</div>
+</div>
+<div style="padding:20px">
+<button class="button button-assertive button-block" ui-sref="app.testMain">Back</button>
+</div>
+
+</ion-content>
+</ion-view>

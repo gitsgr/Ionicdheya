@@ -1,0 +1,82 @@
+/* Empty. Add your own CSS if you like */
+.custom-icon {
+  color : #0094d4;
+}
+
+.alignright { float: right; }
+.container {
+    text-align: center;
+}
+.alltxtcolor {
+    color: #5D6D7E;
+}
+.ryght {
+    text-align: right;
+    padding: 5px;
+}
+.container {
+    text-align: center;
+    padding: 12px;
+}
+.allimgs {
+    width: 70%;
+    height: 70%;
+    text-align: center;
+    padding: 12px;
+}
+
+.divider-left{
+text-align: left;
+}
+.divider-right{
+text-align: right;
+}
+.matchparent{
+  height: 100%;
+  background-color:#fff;
+  width:100%;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.coll{
+border: 1px solid black;
+}
+
+
+.required:after { content:" *"; }
+
+.margin{
+  margin: 20px;
+}
+.margin-left{
+  margin-left: 10px;}
+
+.margin-top{
+  margin-top: 50px;
+}
+.align-Bottom{
+  align-Bottom;
+}
+
+.margin-all {
+    margin: 10px 15px 10px 20px;
+}
+
+.color-dheya{
+  color: #0094d9;
+}
+.alignleft {
+    float: left;
+}
+.alignright {
+    float: right;
+}
+.align_center {
+  center-align;
+}
+a {
+     text-decoration: none ;
+  }

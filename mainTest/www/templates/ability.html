@@ -1,0 +1,56 @@
+<ion-view view-title="Ability Test" ng-init="getQuetions($stateParams.tId)" style="background-color: #4CB8C4">
+  <ion-content>
+    <p style="color:white; font-size: 18px" class="ryght">Time left : {{countDown}}</p>
+
+    <div id="tcard" ng-show="testcard">
+    <div class="card" ng-repeat="item in que track by $index" ng-show="$index == indexToShow">
+      <div class="item item-divider" style="background-color: #5D6D7E; padding-top:10px; color:#fff">
+      Question No: {{indexToShow}} / {{que.length}}
+    </div>
+    <div align="center">
+      <img  class="allimgs" ng-src="{{qImg}}">
+    </div>
+  </div>
+  <div class="card" ng-repeat="item in que track by $index" ng-show="$index == indexToShow">
+    <div class="item item-divider" style="background-color: #5D6D7E; color: #fff; padding-top:10px">
+      Options:
+    </div>
+    <div style="padding:5px" ng-if="item.quesoptionimg!= null">
+      <img style="width: 100%" ng-src="{{aImg}}">
+    </div>
+    <div>
+    <div  class="row" style="padding:5px; width: 100%; text-align:center">
+                    <div style="font-size:20px; width:20%">
+                      <input type="radio" name="answer" ng-model="answer" value="{{1}}">
+                      <b>A</b>
+                    </div>
+                    <div style="font-size:20px; width:20%">
+                      <input type="radio" name="answer" ng-model="answer" value="{{2}}">
+                      <b>B</b>
+                    </div>
+                    <div style="font-size:20px; width:20%">
+                      <input type="radio" name="answer" ng-model="answer" value="{{3}}">
+                      <b>C</b>
+                    </div>
+                    <div style="font-size:20px; width:20%">
+                      <input type="radio" name="answer" ng-model="answer" value="{{4}}">
+                      <b>D</b>
+                    </div>
+                    <div style="font-size:20px; width:20%" ng-if="item.OPText5 != null">
+                      <input type="radio" name="answer" ng-model="answer" value="{{5}}">
+                      <b>E</b>
+                    </div>
+    </div>
+
+    <div style="padding:20px">
+    <button class="button button-dark button-block" ng-click="nextQuetion(answer)">Next</button>
+  </div>
+  </div>
+</div>
+</div>
+<div id="done" ng-show="testdone" class="container" style="color:white; padding:20px">
+  <h4 style="color:white">Ability Test NO. 2 Completed!</h4>
+<button class="button button-dark button-block" ui-sref='app.testMain'><u>Back</u></button>
+</div>
+  </ion-content>
+</ion-view>
